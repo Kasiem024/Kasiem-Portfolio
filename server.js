@@ -13,9 +13,8 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/', (req, res) => {
+app.get('/style.css', (req, res) => {
   fs.readFile('style.css', (err, data) => {
-    res.setHeader('Content-Type', 'text/style');
     res.send(data);
   });
 });

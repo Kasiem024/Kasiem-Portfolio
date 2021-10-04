@@ -2,23 +2,18 @@
 
 const express = require('express');
 const fs = require('fs');
-
 const app = express();
+
 const PORT = process.env.PORT || 8042;
 
-app.get('/', (req, res) => {
-  fs.readFile('index.html', (err, data) => {
-    res.setHeader('Content-Type', 'text/html');
-    res.send(data);
-  });
-});
+app.use(express.static('public'));
 
-app.get('/style.css', (req, res) => {
-  fs.readFile('style.css', (err, data) => {
-    res.send(data);
-  });
+app.get('/', (req, res) => {
+    fs.readFile('public/index.html', (err, data) => {
+        res.send(data);
+    });
 });
 
 app.listen(PORT, () => {
-  console.log(`Example app listening at http://localhost:${PORT}`);
+    console.log(`Example app listening at http://localhost:${PORT}`);
 });

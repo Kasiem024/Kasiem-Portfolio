@@ -5,57 +5,47 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 65px;
     margin: auto;
     display: block;
     width: fit-content;
     margin-bottom: 10px;
 }
 
-h1:after {
-    content: '';
-    left: 0;
-    margin: auto;
-    display: block;
-    width: 100%;
-    border-bottom: 3px solid;
-    margin-top: 10px;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-}
-
-h1:hover:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-h2:after {
-    content: '';
-    left: 0;
-    margin: auto;
-    display: block;
-    width: 100%;
-    border-bottom: 3px solid;
-    margin-top: 10px;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-}
-
 h2 {
-    font-size: 60px;
+    font-size: 55px;
     margin: auto;
     display: block;
     width: fit-content;
 }
 
-h2:hover:after {
+h3 {
+    text-align: center;
+    font-size: 45px;
+    margin: auto;
+    width: fit-content;
+}
+
+h1:after,
+h2:after,
+h3:after {
+    content: '';
+    left: 0;
+    margin: auto;
+    display: block;
+    width: 100%;
+    border-bottom: 3px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+h1:hover:after,
+h2:hover:after,
+h3:hover:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -86,7 +76,7 @@ img:hover {
     height: 5rem;
     width: 5rem;
     background-color: rgb(22, 22, 22);
-    color: #fff !important;
+    color: #fff;
     border-radius: 100%;
     text-align: center;
     font-size: 3rem;
@@ -102,12 +92,6 @@ img:hover {
 
 .linkedin:hover {
     background-color: rgb(40, 103, 178);
-}
-
-.projects h3 {
-    text-align: center;
-    font-size: 50px;
-    margin: auto;
 }
 
 .projects p {
@@ -139,8 +123,12 @@ footer {
     text-align: center;
 }
 
+footer p {
+    font-size: 50px;
+}
+
 @media only screen and (max-width: 810px) {
-    footer h2 {
+    footer p {
         font-size: 35px;
     }
 }
